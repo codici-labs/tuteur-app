@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-row>
+    <div  class="center">
+        <img src="http://web.tuteur.com.ar/app/img/logo-137x165.png" class="logo" />
+        <h3>CALIDAD E INVESTIGACIÓN AL SERVICIO DE LA SALUD</h3>
+
+    </div>
+   
+  </ion-row>
+  <ion-row>
+    <ion-list no-lines>
+      <button ion-item *ngFor="let item of categorias" class="home-item">{{item.nombre}}</button> 
+    </ion-list>
+  </ion-row>
+</ion-content>
