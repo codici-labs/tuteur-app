@@ -7,6 +7,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

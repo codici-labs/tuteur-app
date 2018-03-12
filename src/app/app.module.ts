@@ -12,6 +12,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { File } from '@ionic-native/file';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { FilePath } from '@ionic-native/file-path';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,6 +41,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    FilePath,
+    FileTransfer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
