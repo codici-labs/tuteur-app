@@ -8,6 +8,8 @@ import { MenuPage } from '../pages/menu/menu';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { CategoryDetailPage } from '../pages/category-detail/category-detail';
+
 import { Api } from '../providers/api';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,6 +36,7 @@ export function providers() {
     MenuPage,
     ContactPage,
     HomePage,
+    CategoryDetailPage,
     TabsPage
   ],
   imports: [
@@ -48,6 +51,7 @@ export function providers() {
     MenuPage,
     ContactPage,
     HomePage,
+    CategoryDetailPage,
     TabsPage
   ],
   providers: providers()

@@ -16,7 +16,7 @@
   </ion-row>
   <ion-row>
     <ion-list no-lines>
-      <button ion-item *ngFor="let item of categorias" class="home-item">{{item.nombre}}</button> 
+      <button ion-item *ngFor="let item of categorias" class="home-item" (tap)='viewProducts(item.products, item.nombre)'>{{item.nombre}}</button> 
     </ion-list>
   </ion-row>
 </ion-content>

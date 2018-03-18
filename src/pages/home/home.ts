@@ -6,6 +6,7 @@ import { Platform } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { CategoryDetailPage } from '../category-detail/category-detail';
 
 
 @Component({
@@ -42,4 +43,9 @@ export class HomePage {
 	   });
        
     }
+
+    viewProducts(products, title){
+      this.navCtrl.push(CategoryDetailPage, {products: products, title: title});
+    }
+
   }
