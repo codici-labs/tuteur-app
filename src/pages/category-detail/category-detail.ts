@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProductPage } from '../product/product';
 
 /**
  * Generated class for the CategoryDetailPage page.
@@ -27,6 +28,10 @@ export class CategoryDetailPage {
 		this.products = this.params.get('products');
 	}
 
+
+	viewDetails(product){
+      this.navCtrl.push(ProductPage, {product: product});
+    }
 	
 
 }

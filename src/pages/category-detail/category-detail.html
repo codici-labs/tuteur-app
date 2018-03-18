@@ -16,7 +16,7 @@
 <ion-content padding>
  <ion-row>
     <ion-list no-lines>
-      <button ion-item *ngFor="let item of products" class="home-item" (tap)='viewProducts(item.products)'>{{item.droga}}</button> 
+      <button ion-item *ngFor="let item of products" class="home-item" (tap)='viewDetails(item)'>{{item.droga}}</button> 
     </ion-list>
   </ion-row>
 </ion-content>

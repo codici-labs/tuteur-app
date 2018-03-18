@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CategoryDetailPage } from '../pages/category-detail/category-detail';
+import { ProductPage } from '../pages/product/product';
 
 import { Api } from '../providers/api';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
@@ -37,6 +38,7 @@ export function providers() {
     ContactPage,
     HomePage,
     CategoryDetailPage,
+    ProductPage,
     TabsPage
   ],
   imports: [
@@ -52,6 +54,7 @@ export function providers() {
     ContactPage,
     HomePage,
     CategoryDetailPage,
+    ProductPage,
     TabsPage
   ],
   providers: providers()
