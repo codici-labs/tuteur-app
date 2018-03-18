@@ -8,13 +8,25 @@ import { MenuPage } from '../pages/menu/menu';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { Api } from '../providers/api';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { FilePath } from '@ionic-native/file-path';
+
+export function providers() {
+  return [
+    StatusBar,
+    SplashScreen,
+    Api,
+    FileTransfer,
+    File,
+    FilePath,
+    FileTransferObject,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+}
 
 @NgModule({
   declarations: [
@@ -38,13 +50,6 @@ import { FilePath } from '@ionic-native/file-path';
     HomePage,
     TabsPage
   ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    File,
-    FilePath,
-    FileTransfer,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  providers: providers()
 })
 export class AppModule {}
