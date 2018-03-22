@@ -7,6 +7,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { CategoryDetailPage } from '../category-detail/category-detail';
+import { Api } from '../../providers/api';
 
 
 @Component({
@@ -22,15 +23,11 @@ export class HomePage {
   	public navCtrl: NavController,
   	private http: Http,
   	public plt: Platform,
-  	private storage: Storage,
+    private storage: Storage,
+  	private api: Api,
   	public loadingCtrl: LoadingController
   	) {
 
-  	let loader = this.loadingCtrl.create({
-      content: "Comprobando actualizacion...",
-      duration: 3000
-    });
-    loader.present();
   	
         
   	this.storage.get('categorias').then((val) => {

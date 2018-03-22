@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, ToastController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Http } from '@angular/http';
@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Api } from '../providers/api';
+import { File } from '@ionic-native/file';
+import { Network } from '@ionic-native/network';
 @Component({
   templateUrl: 'app.html',
   providers:  [
@@ -18,6 +20,7 @@ export class MyApp {
   rootPage:any = TabsPage;
   @ViewChild(Nav) nav: Nav;
 
+  isOnApp: boolean = false;
 
   constructor(
     platform: Platform, 
@@ -25,16 +28,44 @@ export class MyApp {
     splashScreen: SplashScreen,
     private http: Http,
     private storage: Storage,
-    private api: Api
+    private api: Api,
+    private network: Network,
+    private file: File,
+    private toastCtrl: ToastController
     ) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      
+      
 
-      this.api.getJson();
+
+      this.api.imageDirectory = this.file.dataDirectory;
+
+      if(this.isConnected()){
+        console.log('Hay internet');
+        let toast = this.toastCtrl.create({
+          message: 'Hay internet',
+          duration: 3000
+        });
+        toast.present();
+         this.api.getJson();
+      }else{
+        let toast = this.toastCtrl.create({
+          message: 'No Hay internet',
+          duration: 3000
+        });
+        toast.present();
+        console.log('No hay internet');
+      }
+     
 
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+
+  isConnected(): boolean {
+    let conntype = this.network.type;
+    return conntype && conntype !== 'unknown' && conntype !== 'none';
   }
 }

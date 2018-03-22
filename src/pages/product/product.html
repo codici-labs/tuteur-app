@@ -14,12 +14,13 @@
 
 
 <ion-content padding>
-<ion-row><img src="http://via.placeholder.com/350x150"></ion-row>
+ 
+<ion-row><img [src]="dataurl" width="150" height="100"></ion-row>
 <ion-row>
     <ion-list>
     	<div ion-item>
 	    	<h4>MARCA:</h4>
-	      	{{product.marca}}
+	      	{{product.marca}} - imagen:  {{product.imagen}}
       	</div> 
       	<div ion-item>
 	    	<h4>DROGA:</h4>

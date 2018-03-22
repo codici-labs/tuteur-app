@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, ToastController } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http'
 import { IonicStorageModule } from '@ionic/storage';
@@ -17,6 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
+import { Network } from '@ionic-native/network';
 
 export function providers() {
   return [
@@ -25,7 +26,9 @@ export function providers() {
     Api,
     FileTransfer,
     File,
+    Network,
     FilePath,
+    ToastController,
     FileTransferObject,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

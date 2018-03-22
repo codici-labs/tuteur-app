@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Api } from '../../providers/api';
+import { File } from '@ionic-native/file';
+import { ToastController } from 'ionic-angular';
 /**
  * Generated class for the ProductPage page.
  *
@@ -14,15 +16,50 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProductPage {
 	product: any;
+	image: any;
+	dataurl: string;
+	cordova: any;
 
 	constructor(
 		public navCtrl: NavController, 
-		public params: NavParams
+		public params: NavParams,
+		public api: Api,
+		public file: File,
+		public toast: ToastController
 		) {
 		this.product = this.params.get('product');
+		//this.image = this.cordova.file.dataDirectory+this.product.imagen+ '&date=' + new Date().getTime();
+		this.transformarDataUrl(this.product.imagen);
 
+		this.toast.create({
+		    message: this.product.imagen,
+		    duration: 3000,
+		    position: 'top'
+		  });
+		console.log(this.dataurl);
+		//console.log(this.api.imageDirectory+this.product.imagen);
 	}
 
+
+	transformarDataUrl(imageName)
+	  {
+	  	this.toast.create({
+		    message: 'Entra a la data url',
+		    duration: 3000,
+		    position: 'top'
+		  });
+	    this.file.readAsDataURL(this.file.dataDirectory, imageName).then(dataurl => {
+	      this.dataurl = dataurl;
+	    },
+	  (error) =>{
+	  	this.toast.create({
+		    message: error.message,
+		    duration: 3000,
+		    position: 'top'
+		  });
+	    
+	  });
+	}
 	
 
 }
