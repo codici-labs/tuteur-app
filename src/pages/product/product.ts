@@ -19,7 +19,9 @@ export class ProductPage {
 	image: any;
 	dataurl: string;
 	cordova: any;
-
+	portadaDataUrl: string;
+	title: string = '';
+	
 	constructor(
 		public navCtrl: NavController, 
 		public params: NavParams,
@@ -28,8 +30,10 @@ export class ProductPage {
 		public toast: ToastController
 		) {
 		this.product = this.params.get('product');
+		this.title = this.params.get('title');
 		//this.image = this.cordova.file.dataDirectory+this.product.imagen+ '&date=' + new Date().getTime();
 		this.transformarDataUrl(this.product.imagen);
+		this.transformarPortadaDataUrl(this.product.portada);
 
 		this.toast.create({
 		    message: this.product.imagen,
@@ -43,23 +47,24 @@ export class ProductPage {
 
 	transformarDataUrl(imageName)
 	  {
-	  	this.toast.create({
-		    message: 'Entra a la data url',
-		    duration: 3000,
-		    position: 'top'
-		  });
+	  	
 	    this.file.readAsDataURL(this.file.dataDirectory, imageName).then(dataurl => {
 	      this.dataurl = dataurl;
 	    },
 	  (error) =>{
-	  	this.toast.create({
-		    message: error.message,
-		    duration: 3000,
-		    position: 'top'
-		  });
-	    
+	  	console.log(error);	    
 	  });
 	}
 	
+	transformarPortadaDataUrl(imageName)
+	  {
+	  	
+	    this.file.readAsDataURL(this.file.dataDirectory, imageName).then(dataurl => {
+	      this.portadaDataUrl = dataurl;
+	    },
+	  (error) =>{
+	  	console.log(error);	    
+	  });
+	}
 
 }

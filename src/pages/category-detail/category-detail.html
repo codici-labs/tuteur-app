@@ -6,17 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
- <ion-row>
-    <ion-list no-lines>
-      <button ion-item *ngFor="let item of products" class="home-item" (tap)='viewDetails(item)'>{{item.droga}}</button> 
+<ion-content >
+  <ion-row class="header-category">
+    <img src="http://web.tuteur.com.ar/app/img/logo-137x165.png" class="logo" />
+  </ion-row>
+  <ion-row>
+    <ion-list class="categroy-details-list">
+      <button ion-item *ngFor="let item of products" class="category-item" (tap)='viewDetails(item)'>{{item.droga}}</button> 
     </ion-list>
   </ion-row>
 </ion-content>

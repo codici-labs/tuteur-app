@@ -30,7 +30,7 @@ export class CategoryDetailPage {
 
 
 	viewDetails(product){
-      this.navCtrl.push(ProductPage, {product: product});
+      this.navCtrl.push(ProductPage, {product: product, title: this.title});
     }
 	
 
