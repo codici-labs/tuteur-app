@@ -15,6 +15,9 @@
    
   </ion-row>
   <ion-row>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Buscar producto"></ion-searchbar>
+  </ion-row>
+  <ion-row>
     <ion-list no-lines>
       <button ion-item *ngFor="let item of categorias" class="home-item" (tap)='viewProducts(item.products, item.nombre)'>{{item.nombre}}</button> 
     </ion-list>
