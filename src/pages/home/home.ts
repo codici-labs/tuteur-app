@@ -7,6 +7,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { CategoryDetailPage } from '../category-detail/category-detail';
+import { SearchPage } from '../search/search';
 import { Api } from '../../providers/api';
 
 
@@ -39,6 +40,42 @@ export class HomePage {
 	   	this.categorias = val;
 	   });
        
+    }
+
+
+    getItems(event){
+      var products = [];
+      var filterProducts = [];
+      var val = event.target.value;
+
+      for (let category of this.categorias) {
+          for (let product of category.products) {
+            products.push(product.droga);
+            
+          }
+          
+        }
+     
+
+      if (val && val.trim() != '') {
+
+        for(var i=0; i < products.length; i++){
+          console.log(products[i]);
+            if(products[i].match('/'+val+'.*/') > -1){
+              console.log(products[i]);
+               filterProducts.push(products[i]); 
+            }
+        }
+
+        /*products = products.filter((droga) => {
+          return (droga.indexOf(val) > -1);
+        });*/
+
+        this.navCtrl.push(SearchPage, {products: filterProducts});
+      }
+
+
+
     }
 
     viewProducts(products, title){

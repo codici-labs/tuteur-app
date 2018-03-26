@@ -1,3 +1,46 @@
 page-contact {
 
+	.content{
+		background-color: #f1f2f2;
+	}
+	.header-contact{
+		background-image: url('../assets/imgs/contacto-bg.png');
+		width: 100%;
+		background-size: cover;
+		height: 138px;
+		background-repeat: no-repeat;
+	}
+	.contact-list{
+		width: 100%;
+	}
+
+	.item{
+		padding-left: 0;
+		font-size: 16px;
+		color: #58595b;
+		background-color: #f1f2f2;
+		text-align: center;
+		.item-inner{
+    		border-bottom: 2px solid #d8d9d9!important;
+		}
+		ion-label{
+			padding: 15px;
+		}
+	}
+
+	.contact-text{
+		margin-bottom: 8px;
+	}
+
+	.contact-logo{
+		
+		.item-inner{
+			border-bottom: none!important;
+		}
+	}
+
+	a{
+		color: #58595b;
+		text-decoration: none;
+	}
 }

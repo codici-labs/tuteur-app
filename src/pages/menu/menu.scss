@@ -1,3 +1,28 @@
-page-about {
+page-menu {
+	.header-calcular{
+		background-image: url('../assets/imgs/header-seccion.png');
+		width: 100%;
+		background-size: cover;
+		height: 138px;
+		background-repeat: no-repeat;
+	}
 
+	.calcular-list{
+		width: 100%;
+	}
+
+	.item{
+		padding-left: 0;
+		font-size: 16px;
+		color: #58595b;
+		background-color: #f1f2f2;
+		text-align: center;
+		.item-inner{
+    		border-bottom: 2px solid #d8d9d9!important;
+		}
+		ion-label{
+			padding: 15px 0 15px 26px;
+		}
+	}
+	
 }

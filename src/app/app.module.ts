@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CategoryDetailPage } from '../pages/category-detail/category-detail';
+import { SearchPage } from '../pages/search/search';
 import { ProductPage } from '../pages/product/product';
 
 import { Api } from '../providers/api';
@@ -42,6 +43,7 @@ export function providers() {
     HomePage,
     CategoryDetailPage,
     ProductPage,
+    SearchPage,
     TabsPage
   ],
   imports: [
@@ -57,6 +59,7 @@ export function providers() {
     ContactPage,
     HomePage,
     CategoryDetailPage,
+    SearchPage,
     ProductPage,
     TabsPage
   ],

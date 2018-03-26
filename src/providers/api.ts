@@ -49,6 +49,7 @@ export class Api {
        this.categories = val;
        var that = this;
        for (let category of this.categories) {
+          that.products.push(category.portada);
           for (let product of category.products) {
             that.products.push(product.imagen);
             that.products.push(product.portada);
