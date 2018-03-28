@@ -4,12 +4,17 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { File } from '@ionic-native/file';
 import { normalizeURL} from 'ionic-angular';
 import { FilePath } from '@ionic-native/file-path';
+import { Observable } from 'rxjs/Rx';
+
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-	tempImagePath: string;
+	peso: any;
+  altura: any;
+  resultado: any;
+
 	constructor(
 		public navCtrl: NavController,
 		private transfer: FileTransfer, 
@@ -18,22 +23,13 @@ export class MenuPage {
 
 
 		) {
-		this.download();
+		
 
 	}
 
-
-  download() {
-    const fileTransfer: FileTransferObject = this.transfer.create();
-    const url = 'http://web.tuteur.com.ar/app/img/logo-137x165.png';
-    fileTransfer.download(url, this.file.dataDirectory + 'test.png').then((entry) => {
-      console.log('download complete: ' + entry.toURL());
-      let imagePath = this.file.dataDirectory +'test.png';
-      this.tempImagePath = imagePath;
-   
-    }, (error) => {
-        console.log('Hubo un probelma al recuperar el archivo');
-    });
+  calcular(){
+     this.resultado = ((0.7184 * (Math.pow(this.altura, 0.725)) * Math.pow(this.peso, 0.425)) / 100).toFixed(2);
   }
+  
 
 }

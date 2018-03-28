@@ -51,6 +51,7 @@ export class HomePage {
       for (let category of this.categorias) {
           for (let product of category.products) {
             products.push(product.droga);
+            products.push(product.marca);
             
           }
           
@@ -61,15 +62,13 @@ export class HomePage {
 
         for(var i=0; i < products.length; i++){
           console.log(products[i]);
-            if(products[i].match('/'+val+'.*/') > -1){
+            if(products[i].match('/'+val+'/') > -1){
               console.log(products[i]);
                filterProducts.push(products[i]); 
             }
         }
 
-        /*products = products.filter((droga) => {
-          return (droga.indexOf(val) > -1);
-        });*/
+        
 
         this.navCtrl.push(SearchPage, {products: filterProducts});
       }

@@ -15,7 +15,27 @@
 	<ion-row>
 	    <ion-list class="calcular-list">
 	      <div ion-item>
-	        <strong>INTRODUZCA PESO CORPORAL EN KG</strong>
+	        <div class="title">INTRODUZCA PESO CORPORAL EN KG</div>
+	        <div>
+	        	<input  type="tel" class="input-tuteur" min="0" max="200" maxlength="3" minlength="1" [(ngModel)]="peso" />
+	    	</div>
+	      </div>
+	      <div ion-item>
+	        <div class="title">INTRODUZCA ALTURA EN CM</div>
+	        <div>
+	        	<input  type="tel" class="input-tuteur" min="0" max="300" maxlength="4" minlength="1" [(ngModel)]="altura" />
+	        </div>
+	      </div>
+
+	      <div ion-item>
+	        <button ion-button class="btn-tuteur" (tap)="calcular();">CALCULAR</button>
+	      </div>
+
+	      <div ion-item>
+	        <div class="title">ÁREA DE SUPERFICIE CORPORAL EN M²</div>
+	        <div>
+	        	<input  type="tel" class="input-tuteur" disabled="disabled" [(ngModel)]="resultado" value="resultado" />
+	        </div>
 	      </div>
 		</ion-list>
 	</ion-row>

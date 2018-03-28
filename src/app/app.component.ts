@@ -35,19 +35,12 @@ export class MyApp {
     ) {
     platform.ready().then(() => {
       
-      
-
-
       this.api.imageDirectory = this.file.dataDirectory;
 
       if(this.isConnected()){
-        console.log('Hay internet');
-        let toast = this.toastCtrl.create({
-          message: 'Hay internet',
-          duration: 3000
-        });
-        toast.present();
-         this.api.getJson();
+          console.log('Hay internet');
+          
+         this.api.update();
       }else{
         let toast = this.toastCtrl.create({
           message: 'No Hay internet',
