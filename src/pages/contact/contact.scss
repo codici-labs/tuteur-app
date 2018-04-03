@@ -7,7 +7,7 @@ page-contact {
 		background-image: url('../assets/imgs/contacto-bg.png');
 		width: 100%;
 		background-size: cover;
-		height: 138px;
+		height: 100px;
 		background-repeat: no-repeat;
 	}
 	.contact-list{
@@ -16,7 +16,7 @@ page-contact {
 
 	.item{
 		padding-left: 0;
-		font-size: 16px;
+		font-size: 14px;
 		color: #58595b;
 		background-color: #f1f2f2;
 		text-align: center;
@@ -24,7 +24,7 @@ page-contact {
     		border-bottom: 2px solid #d8d9d9!important;
 		}
 		ion-label{
-			padding: 15px;
+			padding: 8px;
 		}
 	}
 

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-row  >
+  <div class="header-product" [style.background-image]="'url('+portadaDataUrl+')'">
+    <div class="product-image" [style.background-image]="'url('+dataurl+')'"></div>
+  
+  </div>
+  </ion-row>
+
+
+  <ion-row padding>
+    <ion-list class="products-list">
+    	<div ion-item text-wrap [innerHtml]="product.dosificacion">
+	    	
+	      
+      	</div> 
+      	
+      	
+    </ion-list>
+  </ion-row>
+
+</ion-content>

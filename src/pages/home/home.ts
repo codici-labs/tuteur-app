@@ -45,7 +45,7 @@ export class HomePage {
 
 
     getItems(event){
-      var products = [];
+     /* var products = [];
       var filterProducts = [];
       var val = event.target.value;
 
@@ -74,7 +74,28 @@ export class HomePage {
         this.navCtrl.push(SearchPage, {products: filterProducts});
       }
 
+*/
+    var products = [];
+    var filterProducts = [];
+    var val = event.target.value;
+    var rgx = new RegExp(val, 'i');
 
+    for (let category of this.categorias) {
+      for (let product of category.products) {
+          products.push(product);
+        }
+    }
+
+    if (val && val.trim() != '') {
+      products.forEach(function(product) {
+          if(product.marca.match(rgx) || product.droga.match(rgx)){
+            filterProducts.push(product); 
+          }
+      });
+
+      console.log(filterProducts);
+      this.navCtrl.push(SearchPage, {products: filterProducts});
+    }
 
     }
 

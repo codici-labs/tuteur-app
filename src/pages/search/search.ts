@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProductPage } from '../product/product';
 
 @Component({
   selector: 'page-search',
@@ -18,6 +19,8 @@ export class SearchPage {
 		
 	}
 
-	
+	viewProduct(product){
+      this.navCtrl.push(ProductPage, {product: product, title: product.titulo});
+    }
 
 }

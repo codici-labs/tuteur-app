@@ -17,7 +17,8 @@ import { HomePage } from '../pages/home/home'
 @Injectable()
 export class Api {
 
-  url: string = 'http://codicilabs.com/trabajos/tuteur/api/';
+  url: string = 'http://web.tuteur.com.ar/api/';
+  //url: string = 'http://codicilabs.com/trabajos/tuteur/api/';
   products:  any = [];
   categories: any;
   tempImagePath: string;

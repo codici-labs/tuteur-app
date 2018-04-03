@@ -9,7 +9,7 @@
 <ion-content>
 	<ion-row>
 		<ion-list no-lines class="product-list">
-		  <button ion-item *ngFor="let item of products" class="home-item" (tap)='viewProducts(item.products)'>{{item}}</button> 
+		  <button ion-item *ngFor="let item of products" class="home-item" (tap)='viewProduct(item)'>{{item.titulo}}</button> 
 		</ion-list>
 	</ion-row>
 </ion-content>

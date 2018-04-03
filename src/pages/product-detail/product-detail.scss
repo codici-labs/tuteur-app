@@ -1,4 +1,7 @@
-page-product {
+page-product-detail {
+	ion-content{
+		background-color: #f1f2f2!important;
+	}
 	.header-product{
 		width: 100%;
 		background-position: right center;
@@ -10,6 +13,7 @@ page-product {
 	}
 	.products-list{
 		width: 100%;
+		background-color: #f1f2f2;
 	}
 
 	.item{

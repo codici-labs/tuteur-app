@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CategoryDetailPage } from '../pages/category-detail/category-detail';
 import { SearchPage } from '../pages/search/search';
 import { ProductPage } from '../pages/product/product';
+import { ProductDetailPage } from '../pages/product-detail/product-detail';
 
 import { Api } from '../providers/api';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
@@ -44,6 +45,7 @@ export function providers() {
     CategoryDetailPage,
     ProductPage,
     SearchPage,
+    ProductDetailPage,
     TabsPage
   ],
   imports: [
@@ -60,6 +62,7 @@ export function providers() {
     HomePage,
     CategoryDetailPage,
     SearchPage,
+    ProductDetailPage,
     ProductPage,
     TabsPage
   ],
