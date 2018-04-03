@@ -38,16 +38,8 @@ export class MyApp {
       this.api.imageDirectory = this.file.dataDirectory;
 
       if(this.isConnected()){
-          console.log('Hay internet');
-          
-         this.api.update();
-      }else{
-        let toast = this.toastCtrl.create({
-          message: 'No Hay internet',
-          duration: 3000
-        });
-        toast.present();
-        console.log('No hay internet');
+        console.log('Hay internet');
+        this.api.update();
       }
      
 

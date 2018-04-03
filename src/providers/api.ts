@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Platform } from 'ionic-angular';
@@ -12,7 +12,7 @@ import { File } from '@ionic-native/file';
 import { normalizeURL} from 'ionic-angular';
 import { FilePath } from '@ionic-native/file-path';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { HomePage } from '../pages/home/home'
 
 @Injectable()
 export class Api {
@@ -44,8 +44,7 @@ export class Api {
   
   getJson(){
     this.loader = this.loadingCtrl.create({
-      content: "Actualizando...",
-      duration: 3000
+      content: "Actualizando..."
     });
     this.loader.present();
     
@@ -53,11 +52,14 @@ export class Api {
         console.log('Recibiendo json');
         this.storage.set('categorias', data); 
         this.getImages();
+        
     });
     
   }
 
   update(){
+
+   
     this.storage.get('version').then((val) => {
         console.log('Obteniendo version: '+val);
 
@@ -72,7 +74,10 @@ export class Api {
             console.log('Version actual :'+this.version);
             if(data > this.version){
               this.version = data;
+              this.storage.set('version', data); 
               this.getJson();
+
+
             }
         });
         
@@ -102,7 +107,7 @@ export class Api {
   }
 
   download() {
-     console.log('Version antes de update: '+this.version);
+    console.log('Version antes de update: '+this.version);
     for (let image of this.products) {
       const fileTransfer: FileTransferObject = this.transfer.create();
       const url = 'http://web.tuteur.com.ar/app/archivos/productos/'+image;
@@ -118,6 +123,9 @@ export class Api {
 
     this.loader.dismiss();
     this.storage.set('version', this.version);
+
+   
+    window.location.reload();
     
     console.log('Version despues de update: '+this.version);
     

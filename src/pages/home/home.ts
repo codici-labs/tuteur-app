@@ -32,6 +32,7 @@ export class HomePage {
   	
         
   	this.storage.get('categorias').then((val) => {
+      
 	   	/*if(val.version < this.version){
 	   		this.text = 'Hay disponible una version nueva.';
 	   		this.version = this.version++;
