@@ -43,64 +43,35 @@ export class HomePage {
        
     }
 
-
+    
     getItems(event){
-     /* var products = [];
+
+      var products = [];
       var filterProducts = [];
       var val = event.target.value;
+      var rgx = new RegExp(val, 'i');
 
       for (let category of this.categorias) {
-          for (let product of category.products) {
-            products.push(product.droga);
-            products.push(product.marca);
-            
+        for (let product of category.products) {
+            products.push(product);
           }
-          
-        }
-     
+      }
 
       if (val && val.trim() != '') {
-
-        for(var i=0; i < products.length; i++){
-          console.log(products[i]);
-            if(products[i].match('/'+val+'/') > -1){
-              console.log(products[i]);
-               filterProducts.push(products[i]); 
+        products.forEach(function(product) {
+            if(product.marca.match(rgx) || product.droga.match(rgx)){
+              filterProducts.push(product); 
             }
-        }
+        });
 
-        
-
+        console.log(filterProducts);
         this.navCtrl.push(SearchPage, {products: filterProducts});
       }
 
-*/
-    var products = [];
-    var filterProducts = [];
-    var val = event.target.value;
-    var rgx = new RegExp(val, 'i');
-
-    for (let category of this.categorias) {
-      for (let product of category.products) {
-          products.push(product);
-        }
     }
 
-    if (val && val.trim() != '') {
-      products.forEach(function(product) {
-          if(product.marca.match(rgx) || product.droga.match(rgx)){
-            filterProducts.push(product); 
-          }
-      });
-
-      console.log(filterProducts);
-      this.navCtrl.push(SearchPage, {products: filterProducts});
-    }
-
-    }
-
-    viewProducts(products, title){
-      this.navCtrl.push(CategoryDetailPage, {products: products, title: title});
-    }
+      viewProducts(products, title){
+        this.navCtrl.push(CategoryDetailPage, {products: products, title: title});
+      }
 
   }

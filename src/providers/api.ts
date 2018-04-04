@@ -110,16 +110,19 @@ export class Api {
   download() {
     console.log('Version antes de update: '+this.version);
     for (let image of this.products) {
-      const fileTransfer: FileTransferObject = this.transfer.create();
-      const url = 'http://web.tuteur.com.ar/app/archivos/productos/'+image;
+      if(image != ''){
+        const fileTransfer: FileTransferObject = this.transfer.create();
+        const url = 'http://web.tuteur.com.ar/app/archivos/productos/'+image;
+        
+        fileTransfer.download(url, this.file.dataDirectory + image).then((entry) => {
+          let imagePath = this.file.dataDirectory +image;
+          this.tempImagePath = imagePath;
+          this.imageDirectory = this.file.dataDirectory;
+        }, (error) => {
+            console.log('Hubo un probelma al recuperar el archivo');
+        });
+      }
       
-      fileTransfer.download(url, this.file.dataDirectory + image).then((entry) => {
-        let imagePath = this.file.dataDirectory +image;
-        this.tempImagePath = imagePath;
-        this.imageDirectory = this.file.dataDirectory;
-      }, (error) => {
-          console.log('Hubo un probelma al recuperar el archivo');
-      });
     }
 
     this.loader.dismiss();
