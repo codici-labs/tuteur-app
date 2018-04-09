@@ -12,7 +12,7 @@ import { File } from '@ionic-native/file';
 import { normalizeURL} from 'ionic-angular';
 import { FilePath } from '@ionic-native/file-path';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage } from '../pages/home/home'
+import { HomePage } from '../pages/home/home';
 
 @Injectable()
 export class Api {
@@ -108,9 +108,10 @@ export class Api {
   }
 
   download() {
+    var that = this;
     console.log('Version antes de update: '+this.version);
     for (let image of this.products) {
-      if(image != ''){
+      if(image !== 'undefinied'){
         const fileTransfer: FileTransferObject = this.transfer.create();
         const url = 'http://web.tuteur.com.ar/app/archivos/productos/'+image;
         
@@ -125,11 +126,14 @@ export class Api {
       
     }
 
-    this.loader.dismiss();
+    
     this.storage.set('version', this.version);
-
-   
-    window.location.reload();
+    setTimeout(function(){
+      that.loader.dismiss();
+      
+      window.location.reload();
+    }, 20000);
+    
     
     console.log('Version despues de update: '+this.version);
     
