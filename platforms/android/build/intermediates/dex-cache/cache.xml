@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d29e451fd5bcc265989bf80afd4f149d95d72e7d">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.4.0_a267e891f7ba56a809661d0f718cf5a1960e9f1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="05e3d15c623cd98f0eb43c8249fb6151fae0786c">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.4.0_abf4f23bb650dc3e8921e7a1640038b72791b9cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="e04f28ac2dd9bbe48ced6fc87fedf46c2586f5d6">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.4.0_530564803ca358ee92e322f0f7a9626a44a4fa3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="b77e50b3c31d0fc64148530f7077f79ec114b5b9">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.4.0_e92c49e2928e54aec73214150a5b17061d48d4d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.3.0\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="53d2966f0ad9d41e13d20b2458ca77a55aef3154">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-6.3.0-debug_0c8f071e5491b9bafd75660d213cd60bf5d026a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c2deeac83ffa1304264bc755c2ddb84e7a7fa239">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.4.0_47c31729bc10ac09bbc2849a96833d4d9bc03538.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="a7a0aa678c3bbadb67fb41df9e107f7ee9087902">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.4.0_ef4a6626a364e9e92344d29c27879dda7c3dcb37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="4961be1437163ab598620a3c907c0f3432936f51">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.4.0_40b2b6cf54d62de599c5a2455062a0cfeb0e625a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\libs\sqlite-connector.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="76169ab23a4f939925491c6fe186749da5a56ee9">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\sqlite-connector_99469c99b6ddb330013267e06e572fb04f24362c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Martin\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\25.4.0\f6a2fc748ae3769633dea050563e1613e93c135e\support-annotations-25.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f6a2fc748ae3769633dea050563e1613e93c135e">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\support-annotations-25.4.0_8da085ce35027bb5df00ff4c553643844ca84ddb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="a64026daf4819a589aea776f5deb19b257a104d1">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.4.0_69a2d7be59ec6c8810bfe4b3d2823c099eeac880.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\dev\tuteur-app\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\dev\tuteur-app\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.4.0_d301511c06307beac17d217b92ae3b88c5ad1dea.jar" />
+    </item>
+
+</items>
