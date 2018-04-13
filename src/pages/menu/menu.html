@@ -17,13 +17,13 @@
 	      <div ion-item>
 	        <div class="title">INTRODUZCA PESO CORPORAL EN KG</div>
 	        <div>
-	        	<input  type="number" class="input-tuteur" min="0" max="200" maxlength="3" minlength="1" [(ngModel)]="peso" />
+	        	<input  type="text" pattern="\d*" class="input-tuteur" min="0" max="200" maxlength="3" minlength="1" [(ngModel)]="peso" />
 	    	</div>
 	      </div>
 	      <div ion-item>
 	        <div class="title">INTRODUZCA ALTURA EN CM</div>
 	        <div>
-	        	<input  type="number" class="input-tuteur" min="0" max="300" maxlength="4" minlength="1" [(ngModel)]="altura" />
+	        	<input  type="text" pattern="\d*" class="input-tuteur" min="0" max="300" maxlength="4" minlength="1" [(ngModel)]="altura" />
 	        </div>
 	      </div>
 

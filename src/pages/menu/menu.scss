@@ -42,6 +42,10 @@ page-menu {
 	    padding: 8px;
 	    border-radius: 8px;
 	    color: #000;
+	    &:disabled{
+	    	color: #000;
+	    	opacity: 1;
+	    }
 	}
 	
 	.btn-tuteur{
